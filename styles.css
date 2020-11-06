@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 33%;
+    margin-right: 33%;
+    margin-top: 10%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.title {
+    margin-bottom: 25px;
+    text-decoration: underline;
+}
+
+.description {
+    margin-bottom: 25px;
+}
+
+.button {
+}
+#random_button {
+    top:50%;
+    left:45%;
+    position: fixed;
+    border: #a5a5a5 solid 1px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 1px rgb(189, 189, 189);
+    padding: 0.5em 3em;
+}
+#random_button:hover {
+    box-shadow: 1px 1px 1px rgb(110, 110, 110);
+}  
+#random_button:active {
+    transform: translateY(1px);
+}
+
+
