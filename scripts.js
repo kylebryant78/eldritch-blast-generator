@@ -16,7 +16,14 @@ let random_descriptions_array = ["A beam of crackling energy",
 function show_quote () {
     let random = Math.floor(Math.random() * random_descriptions_array.length);
     let random_quote = (random, random_descriptions_array[random]);
+
     console.log(random_quote);
-    document.getElementById("description").innerHTML = random_quote;
+
+    let description = document.getElementById("description");
+    description.classList.add('pre-animation');
+    description.innerHTML = random_quote;
+    setTimeout(function(){
+        description.classList.remove('pre-animation')
+    },350)
 }
 show_quote();

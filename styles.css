@@ -16,6 +16,11 @@ body {
 
 .description {
     margin-bottom: 25px;
+    transition: all 2s;
+}
+.description .pre-animation {
+    opacity: 0;
+    max-height: 0;
 }
 
 .button {
