@@ -5,6 +5,7 @@
     "start_url": "https://www.eldritchblast.co.uk",
     "background_color": "#5f1a37",
     "theme_color": "#1c1c1c",
+    "display": "standalone",
     "icons": [{
       "src": "eb logo.png",
       "sizes": "512x512",
