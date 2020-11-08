@@ -6,8 +6,8 @@
     "background_color": "#5f1a37",
     "theme_color": "#1c1c1c",
     "icons": [{
-      "src": "eb logo.jpg",
-      "sizes": "256x256",
+      "src": "eb logo.png",
+      "sizes": "512x512",
       "type": "image/png"
     }]
   }

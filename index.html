@@ -30,5 +30,12 @@
         </div>
 
         <script src="scripts.js"></script>
+        <script>
+            if ('serviceWorker' in navigator) {
+  // sw.js can literally be empty, but must exist
+                navigator.serviceWorker.register('/sw.js');
+            }
+                self.addEventListener('fetch', (event) => {});
+        </script>
     </body>
 </html>
