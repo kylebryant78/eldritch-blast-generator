@@ -1,0 +1,13 @@
+{
+    "name": "Random Eldritch Blast Description Generator",
+    "short_name": "Random EB Generator",
+    "description": "A generator to help you describe every eldritch blast during your next play session",
+    "start_url": "/?homescreen=1",
+    "background_color": "#5f1a37",
+    "theme_color": "#1c1c1c",
+    "icons": [{
+      "src": "eb logo.jpg",
+      "sizes": "256x256",
+      "type": "image/png"
+    }]
+  }
