@@ -28,3 +28,4 @@ function show_quote () {
     },350)
 }
 show_quote();
+
