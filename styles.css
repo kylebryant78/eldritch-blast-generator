@@ -6,9 +6,12 @@ body {
     margin-left: 33%;
     margin-right: 33%;
     margin-top: 10%;
+    background: url('https://www.dndbeyond.com/content/1-0-1292-0/skins/waterdeep/images/background_texture.png');
 }
 h1 {
     font-family: 'Oswald', sans-serif;
+    color: rgb(95, 26, 55);
+    font-size: 50px;
 }
 .title {
     margin-bottom: 25px;
@@ -19,6 +22,7 @@ h1 {
     margin-bottom: 25px;
     transition: all 2s;
     font-family: 'Raleway', sans-serif;
+    color: #5f201a;
 }
 .description .pre-animation {
     opacity: 0;
@@ -32,10 +36,12 @@ h1 {
     left:45%;
     position: fixed;
     border: #a5a5a5 solid 1px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(236, 234, 233);
     box-shadow: 1px 1px 1px rgb(189, 189, 189);
     padding: 0.5em 3em;
     font-family: 'Raleway', sans-serif;
+    color: #5f201a;
+    font-weight: 600;
 }
 #random_button:hover {
     box-shadow: 1px 1px 1px rgb(110, 110, 110);

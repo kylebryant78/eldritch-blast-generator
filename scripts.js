@@ -13,6 +13,7 @@ let random_descriptions_array = ["A beam of crackling energy",
 "An invisible force rips through the air, the only reason you notice the spell hit is the hot air between the warlock and the now crumpled over enemy",
 "An arcane tentacle strikes from above the warlock"];
 
+
 function show_quote () {
     let random = Math.floor(Math.random() * random_descriptions_array.length);
     let random_quote = (random, random_descriptions_array[random]);
