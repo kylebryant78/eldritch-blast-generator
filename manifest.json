@@ -7,7 +7,7 @@
     "theme_color": "#1c1c1c",
     "display": "standalone",
     "icons": [{
-      "src": "/images/eb logo.png",
+      "src": "eb logo.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable",
