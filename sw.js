@@ -1,34 +1,20 @@
-let cacheName = 'eldritchBlastCache';
-let appShellFiles = [
-    '/index.html',
-    '/styles.css',
-    '/scripts.js',
-    '/manifest.json'
-];
-
-self.addEventListener('install', (e) => {
-    console.log('[Service Worker] Install');
-    e.waitUntil(
-        caches.open(cacheName).then((cache)) => {
-            console.log('[Service Worker] Caching all: app shell and content');
-        return cache.addAll(contentToCache);
-    )}
+//On install - the application shell cached
+self.addEventListener('install', function(event) {
+    event.waitUntil(
+        caches.open('sw-cache').then(function(cache) {
+            //Static files that make up the application shell are cached
+            return cache.add('index.html', 'styles.css', 'scripts.js');
+        })
     );
 });
 
-
-
-self.addEventListener('fetch', (e) => {
-    e.respondWith(
-      caches.match(e.request).then((r) => {
-            console.log('[Service Worker] Fetching resource: '+e.request.url);
-        return r || fetch(e.request).then((response) => {
-                  return caches.open(cacheName).then((cache) => {
-            console.log('[Service Worker] Caching new resource: '+e.request.url);
-            cache.put(e.request, response.clone());
-            return response;
-          });
-        });
-      })
+//with request network
+self.addEventListener('fetch,' function(event) {
+    event.respondWith(
+        //Try the cache
+        caches.match(event.request).then(function(response) {
+            //return it if there is a respone, or else fetch again
+            return response || fetch(event.request);
+        })
     );
-  });
+});

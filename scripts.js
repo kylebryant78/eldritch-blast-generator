@@ -29,7 +29,4 @@ function show_quote () {
 }
 show_quote();
 
-//for the service worker file sw.js
-if('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js');
-};
+
