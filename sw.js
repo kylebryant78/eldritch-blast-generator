@@ -4,6 +4,7 @@ const assets = [
     '/index.html',
     '/scripts.js',
     '/styles.css',
+    '/images/textured\ background.jp2'
     'https://fonts.googleapis.com/css2?family=Oswald&family=Raleway&display=swap',
 ];
 

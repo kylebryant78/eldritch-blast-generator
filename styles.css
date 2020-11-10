@@ -6,7 +6,7 @@ body {
     margin-left: 33%;
     margin-right: 33%;
     margin-top: 10%;
-    background: url('https://www.dndbeyond.com/content/1-0-1292-0/skins/waterdeep/images/background_texture.png');
+    background-image: url("/images/textured\ background.jp2");
 }
 h1 {
     font-family: 'Oswald', sans-serif;
