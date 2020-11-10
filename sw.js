@@ -1,20 +1,39 @@
-//On install - the application shell cached
-self.addEventListener('install', function(event) {
-    event.waitUntil(
-        caches.open('sw-cache').then(function(cache) {
-            //Static files that make up the application shell are cached
-            return cache.add('index.html', 'styles.css', 'scripts.js');
+const staticCacheName = 'site-static-v1';
+const assets = [
+    '/',
+    '/index.html',
+    '/scripts.js',
+    '/styles.css',
+    'https://fonts.googleapis.com/css2?family=Oswald&family=Raleway&display=swap',
+];
+
+// install event
+self.addEventListener('install', evt => {
+    evt.waitUntil(
+        caches.open(staticCacheName).then((cache) => {
+            console.log('caching shell assets');
+            cache.addAll(assets);
         })
     );
 });
 
-//with request network
-self.addEventListener('fetch,' function(event) {
-    event.respondWith(
-        //Try the cache
-        caches.match(event.request).then(function(response) {
-            //return it if there is a respone, or else fetch again
-            return response || fetch(event.request);
+// activate event
+self.addEventListener('activate', evt => {
+    evt.waitUntil(
+        caches.keys().then(keys => {
+            return Promise.all(keys
+                .filter(key => key !== staticCacheName)
+                .map(key => caches.delete(key))
+            );
+        })
+    );
+});
+
+// fetch event
+self.addEventListener('fetch', evt => {
+    evt.respondWith(
+        caches.match(evt.request).then(cacheRes => {
+            return cacheRes || fetch(evt.request);
         })
     );
 });

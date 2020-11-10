@@ -2,7 +2,7 @@
     "name": "Random Eldritch Blast Description Generator",
     "short_name": "Random EB Generator",
     "description": "A generator to help you describe every eldritch blast during your next play session",
-    "start_url": "https://www.eldritchblast.co.uk",
+    "start_url": "/index.html",
     "background_color": "#5f1a37",
     "theme_color": "#1c1c1c",
     "display": "standalone",
